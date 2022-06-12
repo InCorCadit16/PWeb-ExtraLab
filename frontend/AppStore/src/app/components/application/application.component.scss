@@ -1,0 +1,46 @@
+@import '/src/variables.scss';
+
+.mat-card {
+    background: get-color($primary-palette, default);
+    color: #fff;
+    max-width: 1200px;
+    width: 65%;
+    margin: 2rem auto;
+    min-height: 440px;
+
+    .mat-card-content {
+        display: flex;
+        gap: 32px;
+
+
+        & > div:last-child {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    height: 400px;
+    width: 400px;
+}
+
+.author {
+    margin-top: auto;
+    text-align: end;
+}
+
+h1 {
+    margin-bottom: 8px;
+}
+
+.type {
+    margin-top: 0;
+}

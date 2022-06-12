@@ -1,0 +1,24 @@
+<mat-card *ngIf="app">
+    <mat-card-content>
+        <div>
+            <img [src]="app.imageSrc" alt="">
+        </div>
+        <div>
+            <div class="header">
+                <h1>{{app.name}}</h1>
+
+                <button *ngIf="userIsOwner" mat-flat-button color="warn" (click)="deleteApp()">Delete</button>
+            </div>
+            <p class="type">Type: {{app.type}}</p>
+            <p>{{app.description}}</p>
+            <div class="author">
+                <span>Author: {{app.authorUsername}}</span>
+            </div>
+        </div>
+    </mat-card-content>
+    <a href="./assets/07_elife.rar" download="game.rar" *ngIf="isLoggedIn">
+        <button mat-flat-button color="accent">Download</button>
+    </a>
+    
+    
+</mat-card>

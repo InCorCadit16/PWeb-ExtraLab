@@ -1,0 +1,11 @@
+@use '@angular/material' as mat;
+
+$primary-palette: mat.define-palette(mat.$indigo-palette);
+$accent-palette: mat.define-palette(mat.$yellow-palette);
+$warn-palette: mat.define-palette(mat.$red-palette);
+
+
+// possible shades: "default", "lighter", "darker", "text".
+@function get-color($palette ,$shade) {
+    @return mat.get-color-from-palette($palette, $shade);
+}

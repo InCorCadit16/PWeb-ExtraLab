@@ -1,0 +1,6 @@
+/backend/appstore/db.sqlite3
+/backend/appstore/.idea
+/backend/appstore/__pycache__
+/frontend/AppStore/.angular
+/frontend/AppStore/.vscode
+/frontend/AppStore/node_modules

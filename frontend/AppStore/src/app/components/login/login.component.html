@@ -1,0 +1,18 @@
+<form [formGroup]="loginForm">
+    <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput type="text" formControlName="username">
+        <mat-error>
+            <span *ngIf="loginForm.get('username')?.hasError('required')">Required</span>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password">
+        <mat-error>
+            <span *ngIf="loginForm.get('password')?.hasError('required')">Required</span>
+        </mat-error>
+    </mat-form-field>
+
+    <button mat-flat-button color="accent" [disabled]="loginForm.invalid" type="submit" (click)="submit()">Log in</button>
+</form>

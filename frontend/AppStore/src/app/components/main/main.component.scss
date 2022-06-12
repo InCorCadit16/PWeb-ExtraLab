@@ -1,0 +1,40 @@
+
+@import '/src/variables.scss';
+
+:host {
+    display: flex;
+    gap: 48px;
+    padding: 3rem 1rem;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    max-width: 1320px;
+}
+
+.mat-card {
+    background: get-color($primary-palette, lighter);
+}
+
+img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    max-width: 400px;
+    width: 30%;
+}
+
+h1 {
+    margin: 8px 0;
+}
+
+.type {
+    margin-top: 0;
+}
+
+.author {
+    text-align: end;
+    margin-bottom: 0;
+}

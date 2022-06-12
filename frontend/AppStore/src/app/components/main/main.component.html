@@ -1,0 +1,13 @@
+<a *ngFor="let app of applications" [routerLink]="'/app/' + app.id">
+    <mat-card>
+        <mat-card-content>
+            <img [src]="app.imageSrc" alt="">
+            <div>
+                <h1>{{app.name}}</h1>
+                <p class="type">Type: {{app.type}}</p>
+                <p>{{app.shortDescription}}</p>
+                <p class="author">Author: {{app.authorUsername}}</p>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</a>

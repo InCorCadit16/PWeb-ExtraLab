@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+    <div>
+        <a routerLink="/main"><button mat-button>Main</button></a>
+    </div>
+
+    <div>
+        <ng-container *ngIf="authService.isLoggedIn; else notLogged">
+            <a routerLink="new-app" *ngIf="isPublisher"><button mat-icon-button><mat-icon>add</mat-icon></button></a>
+            <span id="no-link-btn"><button mat-button (click)="logout()">Log out</button></span>
+        </ng-container>
+        
+        <ng-template #notLogged>
+            <a routerLink="/login"><button mat-button>Log in</button></a>
+            <a routerLink="/register"><button mat-flat-button color="accent">Sign up</button></a>
+        </ng-template>
+    </div>
+</mat-toolbar>

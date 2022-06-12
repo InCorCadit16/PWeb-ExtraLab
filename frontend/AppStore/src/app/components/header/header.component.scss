@@ -1,0 +1,26 @@
+@import '/src/variables.scss';
+
+
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+a, #no-link-btn {
+    text-decoration: none;
+    transition: all 0.3s;
+    color: get-color($primary-palette, lighter);
+
+    :hover {
+        transition: all 0.3s;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    :active {
+        text-decoration: none;
+        color: get-color($accent-palette, lighter);
+    }
+}
+
+

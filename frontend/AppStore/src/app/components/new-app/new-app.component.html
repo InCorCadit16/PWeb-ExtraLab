@@ -1,0 +1,34 @@
+<form [formGroup]="newAppForm">
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName="name">
+        <mat-error>
+            <span *ngIf="newAppForm.get('name')?.hasError('required')">Required</span>
+            <span *ngIf="newAppForm.get('name')?.hasError('maxLength')">Name is too long. Max is 256 characters</span>
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput type="text" formControlName="description">
+        <mat-error>
+            <span *ngIf="newAppForm.get('description')?.hasError('required')">Required</span>
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>App icon source</mat-label>
+        <input matInput type="text" formControlName="imgSource">
+        <mat-error>
+            <span *ngIf="newAppForm.get('imgSource')?.hasError('required')">Required</span>
+        </mat-error>
+    </mat-form-field>
+
+    <div>
+        <input type="checkbox" formControlName="isGame" id="isGame">
+        <label for="isGame">This app is a game</label>
+    </div>
+
+    <button mat-flat-button [disabled]="newAppForm.invalid" (click)="submit()">Create</button>
+    
+</form>

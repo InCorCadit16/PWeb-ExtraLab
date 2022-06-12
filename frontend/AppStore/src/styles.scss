@@ -1,0 +1,14 @@
+@import '/src/variables.scss';
+
+body {
+    margin: 0;
+    color: get-color($primary-palette, lighter)!important;
+}
+
+.mat-form-field-label {
+    color: get-color($primary-palette, lighter)!important;
+}
+
+.mat-form-field input {
+    color: get-color($primary-palette, lighter)!important;
+}
